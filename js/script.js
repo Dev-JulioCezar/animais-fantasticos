@@ -12,6 +12,7 @@ import initBtcsFetch from "./modules/btc-fetch.js";
 
 const scrollSuave = new ScrollSuave('[data-anime="menu"] a[href^="#"]');
 scrollSuave.init();
+console.log("teste")
 
 initAnimaScrol();
 initFaq();
