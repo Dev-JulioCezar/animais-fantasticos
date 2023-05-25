@@ -4,10 +4,10 @@ import initAnimaScrol from "./modules/scroll-animation.js";
 import TabNav from "./modules/tabNav.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
+import fetchAnimais from "./modules/animais-fetch.js";
 import initDropdown from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initDateObject from "./modules/funcionamento.js";
-import initAnimaisFetch from "./modules/animais-fetch.js";
 import initBtcsFetch from "./modules/btc-fetch.js";
 
 const scrollSuave = new ScrollSuave('[data-anime="menu"] a[href^="#"]');
@@ -26,9 +26,10 @@ modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
+fetchAnimais("../../animaisapi.json", ".numeros-grid");
+
 initDropdown();
 initMenuMobile();
 initDateObject();
-initAnimaisFetch();
 initBtcsFetch();
 initAnimaScrol();
